@@ -1,6 +1,7 @@
 export default function groupChecker(currentUser) {
   const provisionalUserTrustLevel = currentUser.groups.length - 1;
   const provisionallyMoreSenior =
+    /* eslint-disable no-undef */
     provisionalUserTrustLevel > settings.redirect_max_trust_level;
   const expectedTrustLevels = Array.from(
     { length: provisionalUserTrustLevel + 1 },

@@ -11,6 +11,7 @@ export default {
           if (this.currentUser) {
             if (groupChecker(this.currentUser)) {
               // User is part of valid trust levels from 0 to their current level
+              /* eslint-disable no-undef */
               this.router.transitionTo(settings.redirect_path);
             }
           }
