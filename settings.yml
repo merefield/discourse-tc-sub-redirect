@@ -1,0 +1,8 @@
+redirect_path:
+  default: "/s"
+  description:
+    en: "Redirect path"
+redirect_max_trust_level:
+  default: 3
+  description:
+    en: "Redirect max trust level"
