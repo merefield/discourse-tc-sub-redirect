@@ -10,23 +10,23 @@ module("SubRedirect | Library | group-checker", function (hooks) {
   test("Returns correct value depending on groups", async function (assert) {
     const seniorUser = {
       groups: [
-        { name: "trust_level_0" },
-        { name: "trust_level_1" },
-        { name: "trust_level_2" },
-        { name: "trust_level_3" },
-        { name: "trust_level_4" },
+        { name: `${settings.redirect_default_locale_trust_groups_base_name}_0` },
+        { name: `${settings.redirect_default_locale_trust_groups_base_name}_1` },
+        { name: `${settings.redirect_default_locale_trust_groups_base_name}_2` },
+        { name: `${settings.redirect_default_locale_trust_groups_base_name}_3` },
+        { name: `${settings.redirect_default_locale_trust_groups_base_name}_4` },
       ],
     };
 
     const juniorUser = {
-      groups: [{ name: "trust_level_0" }, { name: "trust_level_1" }],
+      groups: [{ name: `${settings.redirect_default_locale_trust_groups_base_name}_0` }, { name: `${settings.redirect_default_locale_trust_groups_base_name}_1` }],
     };
 
     const mixedUser = {
       groups: [
-        { name: "trust_level_0" },
-        { name: "trust_level_1" },
-        { name: "trust_level_3" },
+        { name: `${settings.redirect_default_locale_trust_groups_base_name}_0` },
+        { name: `${settings.redirect_default_locale_trust_groups_base_name}_1` },
+        { name: `${settings.redirect_default_locale_trust_groups_base_name}_3` },
         { name: "creators" },
       ],
     };

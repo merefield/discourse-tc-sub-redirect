@@ -5,7 +5,7 @@ export default function groupChecker(currentUser) {
     provisionalUserTrustLevel > settings.redirect_max_trust_level;
   const expectedTrustLevels = Array.from(
     { length: provisionalUserTrustLevel + 1 },
-    (_, i) => `trust_level_${i}`
+    (_, i) => `${settings.redirect_default_locale_trust_groups_base_name}_${i}`
   );
   const userGroupsNames = currentUser.groups.map((group) => group.name);
 

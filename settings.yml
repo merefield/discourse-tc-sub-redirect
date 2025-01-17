@@ -1,3 +1,7 @@
+redirect_default_locale_trust_groups_base_name:
+  default: "trust_level"
+  description:
+    en: "Base automatic trust level group name - amend for default server language as required, miss out last underscore - e.g. trust_level"
 redirect_path:
   default: "/s"
   description:
@@ -6,3 +10,4 @@ redirect_max_trust_level:
   default: 3
   description:
     en: "Redirect max trust level"
+
