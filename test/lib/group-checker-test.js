@@ -10,23 +10,46 @@ module("SubRedirect | Library | group-checker", function (hooks) {
   test("Returns correct value depending on groups", async function (assert) {
     const seniorUser = {
       groups: [
-        { name: `${settings.redirect_default_locale_trust_groups_base_name}_0` },
-        { name: `${settings.redirect_default_locale_trust_groups_base_name}_1` },
-        { name: `${settings.redirect_default_locale_trust_groups_base_name}_2` },
-        { name: `${settings.redirect_default_locale_trust_groups_base_name}_3` },
-        { name: `${settings.redirect_default_locale_trust_groups_base_name}_4` },
+        {
+          name: `${settings.redirect_default_locale_trust_groups_base_name}_0`,
+        },
+        {
+          name: `${settings.redirect_default_locale_trust_groups_base_name}_1`,
+        },
+        {
+          name: `${settings.redirect_default_locale_trust_groups_base_name}_2`,
+        },
+        {
+          name: `${settings.redirect_default_locale_trust_groups_base_name}_3`,
+        },
+        {
+          name: `${settings.redirect_default_locale_trust_groups_base_name}_4`,
+        },
       ],
     };
 
     const juniorUser = {
-      groups: [{ name: `${settings.redirect_default_locale_trust_groups_base_name}_0` }, { name: `${settings.redirect_default_locale_trust_groups_base_name}_1` }],
+      groups: [
+        {
+          name: `${settings.redirect_default_locale_trust_groups_base_name}_0`,
+        },
+        {
+          name: `${settings.redirect_default_locale_trust_groups_base_name}_1`,
+        },
+      ],
     };
 
     const mixedUser = {
       groups: [
-        { name: `${settings.redirect_default_locale_trust_groups_base_name}_0` },
-        { name: `${settings.redirect_default_locale_trust_groups_base_name}_1` },
-        { name: `${settings.redirect_default_locale_trust_groups_base_name}_3` },
+        {
+          name: `${settings.redirect_default_locale_trust_groups_base_name}_0`,
+        },
+        {
+          name: `${settings.redirect_default_locale_trust_groups_base_name}_1`,
+        },
+        {
+          name: `${settings.redirect_default_locale_trust_groups_base_name}_3`,
+        },
         { name: "creators" },
       ],
     };
