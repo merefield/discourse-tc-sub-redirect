@@ -7,6 +7,7 @@ export default {
   initialize() {
     withPluginApi("1.39.0", (api) => {
       api.modifyClass("route:topic", {
+        pluginId: "discourse-tc-sub-redirect",
         beforeModel() {
           if (this.currentUser) {
             if (groupChecker(this.currentUser)) {
